@@ -1,0 +1,27 @@
+@mixin telefono {
+    @media ( min-width: $telefono){
+        @content;
+
+    }
+}
+
+@mixin tablet {
+    @media ( min-width: $tablet){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media ( min-width: $desktop){
+        @content; //Es para inyectar lo que esta dentro de las llaves
+
+    }
+}
+
+@mixin grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+//Indexamos con las variables para que al hacer cambios solo vamos a variables
